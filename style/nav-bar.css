@@ -1,0 +1,262 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--nav-bg-color);
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    /* Re-apply dark theme variables for the navbar scope */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --border-color: #565869;
+    --link-color: #10a37f;
+    --link-hover-color: #0e8c6d;
+    color: var(--text-primary);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-primary);
+}
+
+.nav-logo {
+    height: 50px;
+    width: 150px;
+}
+
+.logo {
+    background-image: url(../images/ChatGPT\ Image\ Feb\ 3\,\ 2026\,\ 11_43_11\ AM.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    border-radius: 4px;
+    height: 50px;
+    align-content: center;
+    padding: 0px 9px 0px 9px;
+}
+
+.border:hover {
+    border-color: white;
+}
+
+.nav-address {
+    align-items: center;
+    height: 50px;
+    align-content: center;
+
+}
+
+.address-1 {
+    color: var(--text-secondary);
+    font-size: 0.77rem;
+    margin-left: 15px;
+}
+
+.address-2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.address-icon {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar {
+    display: flex;
+    flex: 1;
+    min-width: 250px;
+    max-width: 800px;
+    height: 40px;
+}
+
+.search-select {
+    width: 51.6px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background-color: #4a4a4a;
+    border-right: 1px solid var(--border-color);
+    border-radius: 4px 0px 0px 4px;
+    text-align: center;
+    border: none;
+}
+
+.search-select:hover {
+    background-color: #5a5a5a;
+    color: var(--text-primary);
+}
+
+.search-select:focus {
+    border: 3.1px solid var(--accent-color);
+    outline: none;
+    box-shadow: none;
+}
+
+input {
+    width: 100%;
+    font-size: 0.96rem;
+    padding-left: 7px;
+    background-color: var(--text-primary);
+    color: #111;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+}
+
+.search-logo {
+    width: 50px;
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.search-logo:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.search-logo:active {
+    border: 3.1px solid var(--accent-hover-color);
+}
+
+.lang {
+    background-color: transparent;
+    color: white;
+    height: 50px;
+    border: transparent;
+    width: 40px;
+}
+
+.lang:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.line1 {
+    font-size: 0.8rem;
+}
+
+.line2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+.nav-cart {
+    position: relative;
+}
+
+.cart-logo {
+    height: 30px;
+}
+
+.cart-quantity {
+    position: absolute;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1rem;
+    
+    /* Center it precisely */
+    top: 30%; 
+    left: 36%;
+    transform: translate(-50%, -50%); /* Moves it back by half its own width/height */
+    
+    width: 100%; /* Ensures the number doesn't wrap */
+    text-align: center;
+}
+
+.panel {
+    height: 39px;
+    max-width: 100%;
+    background-color: var(--panel-bg-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    position: relative;
+    top: 60px;
+}
+
+.panel-ops {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.border2 {
+    border: 1.5px solid transparent;
+    padding: 9px;
+}
+
+.border2:hover {
+    border-color: white;
+}
+
+.panel-all {
+    width: 40px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.panel-all i {
+    font-size: 1.1rem;
+}
+
+.panel-all span {
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.hero-section {
+    background-image: url(../images/hero.jpg    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    margin-left: 0px;
+    position: absolute;
+    z-index: -1;
+}
+
+.hero-line {
+    background-color: var(--surface-bg-color);
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 96%;
+    margin: auto;
+}
+
+.hero-line a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.item {
+    height: 400px;
+    border: 2px solid black;
+}

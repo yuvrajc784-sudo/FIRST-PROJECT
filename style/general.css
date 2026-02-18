@@ -1,0 +1,101 @@
+
+:root {
+  --nav-bg-color: #202123; /* Darker for navbar */
+  --panel-bg-color: #343541; /* Lighter for sub-panel */
+  --body-bg-color: #e3e6e6; /* Main page background */
+  --surface-bg-color: white; /* For cards and containers */
+
+  --accent-color: #10a37f;
+  --accent-hover-color: #1a7f64;
+  --button-primary-bg: #10a37f;
+  --button-primary-border: #0e8c6d;
+  --link-color: #007185;
+  --link-hover-color: #C7511F;
+
+  --text-primary: #0F1111;
+  --text-secondary: #565959;
+  --border-color: #dddddd;
+}
+
+/* <p> elements have a default margin on the top
+   and bottom. This removes the default margins. */
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+input, select, button {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.button-primary {
+  color: white;
+  background-color: var(--button-primary-bg);
+  border: 1px solid var(--button-primary-border);
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.button-primary:hover {
+  filter: brightness(0.9);
+}
+
+.button-primary:active {
+  filter: brightness(0.8);
+  box-shadow: none;
+}
+
+.button-secondary {
+  color: var(--text-primary);
+  background: var(--surface-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.button-secondary:hover {
+  background-color: #f7fafa;
+}
+
+.button-secondary:active {
+  background-color: #e7e7e7;
+  box-shadow: none;
+}
+
+/* These styles will limit text to 2 lines. Anything
+   beyond 2 lines will be replaced with "..."
+   You can find this code by using an A.I. tool or by
+   searching in Google.
+   https://css-tricks.com/almanac/properties/l/line-clamp/ */
+.limit-text-to-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.link-primary {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.link-primary:hover {
+  color: var(--link-hover-color);
+}
+
+/* Styles for dropdown selectors. */
+
+
+select:focus,
+input:focus {
+  outline: 2px solid var(--accent-color);
+}

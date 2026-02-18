@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-Admin Panel</title>
+    <link rel="stylesheet" href="herocontent.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .admin-outer {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .admin {
+
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            background-color: #e3e6e6;
+            margin: 30px;
+            border-radius: 40px;
+        }
+
+        .addProduct {
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-outer">
+
+        <h1>ADMIN PANEL</h1>
+        <div class="admin">
+
+            <div>
+                <span>1 . PRODUCT ID : </span>
+                <input type="text" placeholder="Enter ID" class="admin-id">
+            </div>
+
+
+
+
+            <div>
+                <span>2 . PRODUCT IMAGE URL : </span>
+                <input type="text" placeholder="Enter URL" class="admin-image">
+            </div>
+
+
+
+            <div>
+                <span>3 .PRODUCT NAME : </span>
+                <input type="text" placeholder="Enter name" class="admin-name">
+            </div>
+
+
+
+            <div>
+                <span>4 . RATING STARS : </span>
+                <input type="number" placeholder="Enter Rating Stars" class="admin-ratingStars">
+            </div>
+
+
+
+            <div>
+                <span>5 . RATING COUNT : </span>
+                <input type="number" placeholder="Enter Rating Count" class="admin-ratingCount">
+            </div>
+
+
+
+            <div>
+                <span>6 . PRODUCT PRICE : </span>
+                <input type="number" placeholder="Enter Price" class="admin-price">
+            </div>
+
+        </div>
+        <button class="addProduct js-addProduct">ADD PRODUCT</button>
+    </div>
+
+
+    <div class="products">
+        <h1>YOUR PRODUCTS</h1>
+        <div class="main">
+            <div class="products-grid js-products-grid">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+<script src="products.js"></script>
+
+<script>
+    document.querySelector('.js-addProduct').addEventListener('click', () => {
+
+        const id = document.querySelector('.admin-id').value;
+        const image = document.querySelector('.admin-image').value;
+        const name = document.querySelector('.admin-name').value;
+        const ratingStars = document.querySelector('.admin-ratingStars').value;
+        const ratingCount = document.querySelector('.admin-ratingCount').value;
+        const price = document.querySelector('.admin-price').value;
+
+        products.push({
+            id: id,
+            image: image,
+            name: name,
+            rating: {
+                stars: Number(ratingStars),
+                count: Number(ratingCount)
+            },
+            priceCents: Number(price),
+            keywords: ["socks", "sports", "apparel"]
+        });
+
+        
+
+        renderProducts();
+        console.log(products[products.length - 1]);
+
+
+    });
+
+</script>
+
+<script src="amazon.js"></script>
+
+</html>

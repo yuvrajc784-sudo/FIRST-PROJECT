@@ -1,0 +1,110 @@
+.signin {
+    padding: 20px 0px;
+    background-color: white;
+}
+
+.signin div {
+    border: 1.5px solid #e3e6e6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0px;
+    gap: 9px;
+}
+
+.signin button {
+    padding: 6px 100px;
+    font-size: 1rem;
+}
+
+.signin p {
+    font-size: 0.8rem;
+}
+
+.signin a {
+    color: #2162aa;
+}
+
+.backtotop {
+    background-color: #37475a;
+    padding: 20px 0px;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.outer-about-us {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    font-size: 0.9rem;
+
+}
+
+.aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #232f3e;
+    color: white;
+    height: 60vh;
+}
+
+.outer-about-us a {
+    text-decoration: none;
+    color: #dddddd;
+    list-style: none;
+    padding: 1px;
+}
+
+.outer-about-us a:hover {
+    text-decoration: underline;
+}
+
+.footer-2 img {
+    width: 100px;
+    height: 70px;
+}
+
+.footer-2 {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.1px solid grey;
+}
+
+.footer-2 select {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.footer-2 div {
+    width: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.end-footer {
+    background-color: #131a22;
+    height : 70vh;
+    padding: 2% 10%;
+    font-size: 0.8rem;
+    color: grey;
+}
+.end-outer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+}
+
+.end-footer h3 {
+    color: hwb(0 78% 17%);
+}

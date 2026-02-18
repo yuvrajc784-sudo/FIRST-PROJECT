@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+
+    var topKFrequent = function (nums, k) {
+
+        let freq = {};
+
+        nums.forEach((num) => {
+            if (freq[num]) {
+                freq[num] += 1;
+            }
+            else {
+                freq[num] = 1;
+            }
+        })
+
+        let highest = 0;
+        let shighest = 0;
+        let result = [];
+        for (let keys in freq) {
+            if (highest < freq[keys]) {
+                highest = freq[keys];
+                result.push(keys);
+            }
+            else if (shighest < highest && shighest > freq[keys]){
+                shighest = freq[keys];
+                result.push(keys);
+            }
+        }
+        return result;
+    };
+
+    console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1,2]
+
+</script>
+
+</html>

@@ -1,5 +1,7 @@
-import { products } from "../scripts/products.js";
-import { cart } from "../scripts/cart.js";
+import { products } from "./products.js";
+import { cart } from "./cart.js";
+
+const assetPrefix = window.location.pathname.includes('/html/') ? '../' : '';
 
 let html = '';
 
@@ -17,7 +19,7 @@ products.forEach((product) => {
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="../images/ratings/rating-${product.rating.stars * 10}.png">
+              src="${assetPrefix}images/ratings/rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
               ${product.rating.count}
             </div>
@@ -46,7 +48,7 @@ products.forEach((product) => {
           <div class="product-spacer"></div>
 
           <div class="added-to-cart js-added-to-cart-${product.id}">
-            <img src="../images/icons/checkmark.png">
+            <img src="${assetPrefix}images/icons/checkmark.png">
             Added
           </div>
 

@@ -659,10 +659,23 @@ export let products =  [
     ]
   }
 ];
+const assetPrefix = window.location.pathname.includes('/html/') ? '../' : '';
+
+function normalizeAssetPath(path) {
+  if (!path) {
+    return path;
+  }
+
+  if (/^(https?:|data:|\/)/.test(path)) {
+    return path;
+  }
+
+  const cleanPath = path.replace(/^(\.\.\/|\.\/)+/, '');
+  return `${assetPrefix}${cleanPath}`;
+}
+
 products = products.map(p => ({
   ...p,
-  image: p.image.startsWith('../') ? p.image : '../' + p.image,
-  sizeChartLink: p.sizeChartLink
-    ? (p.sizeChartLink.startsWith('../') ? p.sizeChartLink : '../' + p.sizeChartLink)
-    : p.sizeChartLink
+  image: normalizeAssetPath(p.image),
+  sizeChartLink: normalizeAssetPath(p.sizeChartLink)
 }));
